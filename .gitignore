@@ -55,3 +55,6 @@ pip-delete-this-directory.txt
 
 # Misc logs
 *.log
+
+backend/online-valid.csv
+*.csv
