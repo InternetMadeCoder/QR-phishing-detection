@@ -5,6 +5,7 @@ import numpy as np
 import re
 from typing import Optional
 from urllib.parse import urlparse
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -204,4 +205,4 @@ def health_check():
     })
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
